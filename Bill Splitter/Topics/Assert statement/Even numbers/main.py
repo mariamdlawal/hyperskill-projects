@@ -1,6 +1,7 @@
-try:
-    def even(x):
-        assert x % 2 == 0
-        print(x)
-except AssertionError as err:
-    print(err)
+# num = int(input())
+
+def even(x):
+    assert x % 2 == 0
+    return x
+
+# even(num)
