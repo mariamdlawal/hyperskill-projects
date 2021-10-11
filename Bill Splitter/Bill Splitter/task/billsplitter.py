@@ -1,3 +1,6 @@
+# import functions
+import random
+
 # initialize a new list to capture friend names
 friend_list = []
 
@@ -19,15 +22,23 @@ try:
         # retrieve input of total bill amount
         bill = float(input("Enter the total bill value:\n"))
 
-        # divide the bill equally among number of friends
+        # divide the bill equally among number of friends, round to two decimal places
         split_bill = round(bill/num_friends, 2)
 
         # assign the split bill to each friend in the dictionary
         for key in friend_dict:
             friend_dict[key] = split_bill
 
-        # print results from dictionary
-        print(friend_dict)
+        # implement who is lucky feature
+        lucky_feature = input('Do you want to use the "Who is lucky?" feature? Write Yes/No:\n')
+
+        # verify if user input is yes
+        if lucky_feature == 'Yes':
+            lucky_friend = random.choice(list(friend_dict))
+            # print lucky friend
+            print(lucky_friend + " is the lucky one!")
+        else:
+            print("No one is going to be lucky")
 
     # if no friends are joining, print note to user
     else:
