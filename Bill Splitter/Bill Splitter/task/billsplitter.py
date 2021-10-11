@@ -16,11 +16,18 @@ try:
         # initialize a new dictionary to capture all friends attending the dinner party, set the value = 0
         friend_dict = dict.fromkeys(friend_list, 0)
 
-        # print results from dictionary
-        print(friend_dict)
-
         # retrieve input of total bill amount
         bill = float(input("Enter the total bill value:\n"))
+
+        # divide the bill equally among number of friends
+        split_bill = round(bill/num_friends, 2)
+
+        # assign the split bill to each friend in the dictionary
+        for key in friend_dict:
+            friend_dict[key] = split_bill
+
+        # print results from dictionary
+        print(friend_dict)
 
     # if no friends are joining, print note to user
     else:
@@ -28,4 +35,3 @@ try:
 
 except ValueError:
     print("No one is joining for the party")
-

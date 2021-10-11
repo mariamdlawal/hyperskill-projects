@@ -8,3 +8,5 @@ Bill Splitter/Topics/Exception handling/Zero/task-remote-info.yaml
 *.storageRecordIndex
 Bill Splitter/course-info.yaml
 Bill Splitter/course-remote-info.yaml
+Bill Splitter/Bill Splitter/task/__pycache__/billsplitter.cpython-37.pyc
+Bill Splitter/course-remote-info.yaml
