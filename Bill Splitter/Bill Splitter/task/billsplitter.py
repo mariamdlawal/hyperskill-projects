@@ -37,8 +37,17 @@ try:
             lucky_friend = random.choice(list(friend_dict))
             # print lucky friend
             print(lucky_friend + " is the lucky one!")
+            # re-split bill for unlucky friends
+            split_bill = round(bill/(num_friends - 1), 2)
+            # assign new split bill to each friend, assign value of 0 to lucky friend
+            for key in friend_dict:
+                friend_dict[key] = split_bill
+            friend_dict[lucky_friend] = 0
+            # print the updated dictionary
+            print(friend_dict)
         else:
             print("No one is going to be lucky")
+            print(friend_dict)
 
     # if no friends are joining, print note to user
     else:
